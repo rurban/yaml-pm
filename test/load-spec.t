@@ -1,6 +1,6 @@
 use strict;
 use lib -e 't' ? 't' : 'test';
-use TestYAML tests => 52;
+use TestYAML tests => 53;
 
 run_load_passes();
 
@@ -16,6 +16,16 @@ __DATA__
 hr:  65
 avg: 0.278
 rbi: 147
+
+===
++++ yaml
+---
+comment: YAML::XS generates unintended seq elements
+american:
+- Boston Red Sox
+- Detroit Tigers
+- New York Yankees
+- Texas Rangers
 
 ===
 +++ yaml
